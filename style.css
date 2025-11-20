@@ -1,0 +1,102 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f7f9;
+}
+
+h1 {
+    color: #334e68;
+    margin-bottom: 10px;
+}
+
+#controls {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e0f7fa;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#instruction {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #00796b;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* 10 欄 */
+    gap: 5px;
+    width: 800px; /* 控制網格的總寬度 */
+    max-width: 95%;
+    border: 3px solid #ccc;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px; /* 方格寬度 */
+    height: 70px; /* 方格高度 */
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.1s;
+    user-select: none;
+    background-color: #eceff1; /* 初始顏色 */
+    color: #333;
+    border: 1px solid #cfd8dc;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 篩除且不能點擊的項目 */
+.removed {
+    cursor: default !important;
+    transform: none !important;
+    box-shadow: none !important;
+    color: #111 !important;
+}
+
+/* 特殊標記：1 */
+.special-one {
+    background-color: #607d8b !important; /* 灰色 */
+    color: white !important;
+    cursor: default !important;
+}
+
+/* --- 顏色主題 (Color Themes) --- */
+
+/* 2 - 藍色 (Blue) */
+.prime-2 { background-color: #007FFF; color: white; border-color: #007FFF; } /* 深藍 */
+.multiple-2 { background-color: #ADD8E6; } /* 淺藍 */
+
+/* 3 - 紅色 (Red) */
+.prime-3 { background-color: #DC143C; color: white; border-color: #DC143C; } /* 深紅 */
+.multiple-3 { background-color: #F08080; } /* 淺紅 */
+
+/* 5 - 綠色 (Green) */
+.prime-5 { background-color: #008000; color: white; border-color: #008000; } /* 深綠 */
+.multiple-5 { background-color: #90EE90; } /* 淺綠 */
+
+/* 7 - 紫色 (Purple) */
+.prime-7 { background-color: #800080; color: white; border-color: #800080; } /* 深紫 */
+.multiple-7 { background-color: #E6E6FA; } /* 淺紫 */
+
+footer {
+    margin-top: 30px;
+    color: #607d8b;
+    font-size: 0.9em;
+}
